@@ -31,9 +31,9 @@ class _Q6State extends State<Q6> {
                 onChanged: (newRating) {
                   setState(() => rating6 = newRating);
                 },
-                min: 0.0,
+                min: 1.0,
                 max: 5.0,
-                divisions: 5,
+                divisions: 4,
                 label: '$rating6',
               ),
               ElevatedButton(
