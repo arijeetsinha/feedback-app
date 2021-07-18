@@ -10,7 +10,7 @@ class Q4 extends StatefulWidget {
 
 class _Q4State extends State<Q4> {
   @override
-  double rating4 = 0.0;
+  double rating4 = 1.0;
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -26,15 +26,21 @@ class _Q4State extends State<Q4> {
             children: <Widget>[
               Text("Q4"),
               Text("How was the lighting?"),
-              Slider(
-                value: rating4,
-                onChanged: (newRating) {
-                  setState(() => rating4 = newRating);
-                },
-                min: 1.0,
-                max: 5.0,
-                divisions: 4,
-                label: '$rating4',
+              Row(
+                children: [
+                  Text("$rating4"),
+                  Expanded(
+                    child: Slider(
+                      value: rating4,
+                      onChanged: (newRating) {
+                        setState(() => rating4 = newRating);
+                      },
+                      min: 1,
+                      max: 5,
+                      divisions: 4,
+                    ),
+                  ),
+                ],
               ),
               ElevatedButton(
                 onPressed: () {
