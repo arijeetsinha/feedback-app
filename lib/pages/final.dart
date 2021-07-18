@@ -33,23 +33,27 @@ class _FinalState extends State<Final> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            text(widget.rating),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                    '/', (Route<dynamic> route) => false);
-              },
-              child: Text("Restart"),
-            )
-          ],
+        appBar: AppBar(
+          title: Text("Feedback App"),
+          centerTitle: true,
         ),
-      ),
-    ));
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                text(widget.rating),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        '/', (Route<dynamic> route) => false);
+                  },
+                  child: Text("Restart"),
+                )
+              ],
+            ),
+          ),
+        ));
   }
 }
