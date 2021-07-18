@@ -12,18 +12,21 @@ class _FinalState extends State<Final> {
   Text text(double r) {
     if (r <= 10.0) {
       return Text("We are sorry for your inconvenience",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.red,
             fontSize: 28.0,
           ));
     } else if (r <= 20) {
       return Text("Hope we serve you better next time",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.yellow,
             fontSize: 28.0,
           ));
     } else {
       return Text("We hope you come back next time.",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.green,
             fontSize: 28.0,
